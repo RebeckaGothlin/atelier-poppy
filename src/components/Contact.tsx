@@ -103,8 +103,8 @@ const Contact: React.FC = () => {
             : "Interested in custom artwork or have questions? I’d love to hear from you!"}
         </p>
         <div className="contactInfo-wrapper">
-          <a href="mailto:email@email.com">email@email.com</a>
-          <a href="tel:+15555555555">(555) 555-5555</a>
+          <a href="mailto:email@email.com">atelierpoppyart@gmail.com</a>
+          {/* <a href="tel:+15555555555">(555) 555-5555</a> */}
         </div>
       </ContactInfo>
     </ContactSection>
