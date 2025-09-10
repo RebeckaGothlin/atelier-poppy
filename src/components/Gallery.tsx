@@ -32,7 +32,7 @@ const GalleryItem = styled.div`
       aspect-ratio: 11 / 9;
       padding: 1rem;
     }
-    border: 4px solid #a9002d;
+    /* border: 4px solid #a9002d; */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 
