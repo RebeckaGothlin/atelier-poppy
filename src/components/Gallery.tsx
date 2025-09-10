@@ -18,6 +18,12 @@ const GallerySection = styled.section`
 const GalleryItem = styled.div`
   text-align: center;
   overflow: hidden;
+  height: 500px;
+  @media (max-width: 768px) {
+    height: auto;
+    width: 70%;
+    margin: 0 auto;
+  }
 
   img {
     width: 100%;
@@ -41,20 +47,20 @@ const GalleryItem = styled.div`
   }
 `;
 
-import sand from "../assets/images/sand.jpg";
-import satellite from "../assets/images/satellite.jpg";
-import ocean from "../assets/images/ocean.jpg";
-import fresa from "../assets/images/fresa.jpg";
-import sangre from "../assets/images/sangre.jpg";
-import dune from "../assets/images/dune.jpg";
+import sand from "../assets/images/paris (2).jpg";
+import satellite from "../assets/images/illustartion.jpg";
+import ocean from "../assets/images/diplom.jpg";
+import fresa from "../assets/images/paris-2.jpg";
+import sangre from "../assets/images/Screenshot_20230121-114557_Photos.jpg";
+import dune from "../assets/images/restaurang.jpg";
 
 const images = [
-  { src: sand, title: "Sand" },
-  { src: satellite, title: "Satellite" },
-  { src: ocean, title: "Ocean" },
-  { src: fresa, title: "Fresa" },
-  { src: sangre, title: "Sangre" },
-  { src: dune, title: "Dune" },
+  { src: sand, title: "Paris" },
+  { src: satellite, title: "Illustration" },
+  { src: ocean, title: "Diploma" },
+  { src: fresa, title: "Paris illustrations" },
+  { src: sangre, title: "Italy" },
+  { src: dune, title: "Restaurant" },
 ];
 
 const Gallery: React.FC = () => {
