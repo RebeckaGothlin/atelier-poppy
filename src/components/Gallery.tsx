@@ -17,26 +17,37 @@ const GallerySection = styled.section`
 
 const GalleryItem = styled.div`
   text-align: center;
-  overflow: hidden;
-  height: 500px;
-  @media (max-width: 768px) {
-    height: auto;
-    width: 70%;
-    margin: 0 auto;
+
+  .image-box {
+    width: 100%;
+    aspect-ratio: 8 / 9;
+    background: #fae8e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 1.5rem;
+
+    @media (max-width: 768px) {
+      aspect-ratio: 11 / 9;
+      padding: 1rem;
+    }
+    border: 4px solid #a9002d;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 
   img {
-    width: 100%;
     max-width: 100%;
+    max-height: 100%;
+    width: auto;
     height: auto;
+    object-fit: contain;
     display: block;
-    object-fit: cover;
     transition: transform 0.3s ease, filter 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   }
 
-  &:hover img {
-    transform: scale(1.05) translateY(-5px);
+  .image-box:hover img {
+    transform: scale(1.05);
     filter: brightness(1.05);
   }
 
@@ -69,7 +80,9 @@ const Gallery: React.FC = () => {
       <GallerySection id="prints">
         {images.map((item, index) => (
           <GalleryItem key={index}>
-            <img src={item.src} alt={item.title} />
+            <div className="image-box">
+              <img src={item.src} alt={item.title} />
+            </div>
             <p>{item.title}</p>
           </GalleryItem>
         ))}
