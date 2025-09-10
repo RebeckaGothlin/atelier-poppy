@@ -26,13 +26,12 @@ const GalleryItem = styled.div`
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding: 1.5rem;
+    padding: 1.9rem;
 
     @media (max-width: 768px) {
       aspect-ratio: 11 / 9;
-      padding: 1rem;
+      padding: 1.5rem;
     }
-    /* border: 4px solid #a9002d; */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 
