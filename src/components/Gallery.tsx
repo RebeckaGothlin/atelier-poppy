@@ -47,20 +47,20 @@ const GalleryItem = styled.div`
   }
 `;
 
-import sand from "../assets/images/paris (2).jpg";
-import satellite from "../assets/images/illustartion.jpg";
-import ocean from "../assets/images/diplom.jpg";
-import fresa from "../assets/images/paris-2.jpg";
-import sangre from "../assets/images/Screenshot_20230121-114557_Photos.jpg";
-import dune from "../assets/images/restaurang.jpg";
+import paris from "../assets/images/paris (2).jpg";
+import illustration from "../assets/images/illustartion.jpg";
+import diploma from "../assets/images/diplom.jpg";
+import paris2 from "../assets/images/paris-2.jpg";
+import italy from "../assets/images/Screenshot_20230121-114557_Photos.jpg";
+import restaurant from "../assets/images/restaurang.jpg";
 
 const images = [
-  { src: sand, title: "Paris" },
-  { src: satellite, title: "Illustration" },
-  { src: ocean, title: "Diploma" },
-  { src: fresa, title: "Paris illustrations" },
-  { src: sangre, title: "Italy" },
-  { src: dune, title: "Restaurant" },
+  { src: paris, title: "Paris" },
+  { src: illustration, title: "Illustration" },
+  { src: diploma, title: "Diploma" },
+  { src: paris2, title: "Paris illustrations" },
+  { src: italy, title: "Italy" },
+  { src: restaurant, title: "Restaurant" },
 ];
 
 const Gallery: React.FC = () => {
