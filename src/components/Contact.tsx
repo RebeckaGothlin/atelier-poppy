@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import sand from "../assets/rebecka-colors.jpg";
+import sand from "../assets/rebecka.jpg";
 import { useLanguage } from "./LanguageContext";
 
 const ContactSection = styled.section`
