@@ -63,14 +63,30 @@ import diploma from "../assets/images/diplom.jpg";
 import paris2 from "../assets/images/paris-2.jpg";
 import italy from "../assets/images/Screenshot_20230121-114557_Photos.jpg";
 import restaurant from "../assets/images/restaurang.jpg";
+import bookmarks from "../assets/images/bookmarks.jpg";
+import bookmark from "../assets/images/bookmarks-pettson.jpg";
+import photoshop from "../assets/images/photoshop.jpg";
+import glaskula from "../assets/images/glaskula.jpg";
+// import guldklot from "../assets/images/guldklot.jpg";
+// import marble from "../assets/images/marble.jpg";
+import vitvas from "../assets/images/vitvas.jpg";
+import öken from "../assets/images/öken.png";
 
 const images = [
   { src: paris, title: "Paris" },
   { src: illustration, title: "Illustration" },
   { src: diploma, title: "Diploma" },
-  { src: paris2, title: "Paris illustrations" },
+  { src: paris2, title: "Paris illustration" },
   { src: italy, title: "Italy" },
   { src: restaurant, title: "Restaurant" },
+  { src: bookmarks, title: "Bookmarks" },
+  { src: bookmark, title: "Bookmarks" },
+  { src: photoshop, title: "Photoshop illustration" },
+  { src: glaskula, title: "Photoshop illustration" },
+  // { src: guldklot, title: "Photoshop illustration" },
+  // { src: marble, title: "Photoshop illustration" },
+  { src: vitvas, title: "Photoshop illustration" },
+  { src: öken, title: "Illustrator illustration" },
 ];
 
 const Gallery: React.FC = () => {
