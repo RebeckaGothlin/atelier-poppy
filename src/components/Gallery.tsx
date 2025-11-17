@@ -76,7 +76,7 @@ const images = [
   { src: paris, title: "Paris" },
   { src: illustration, title: "Illustration" },
   { src: diploma, title: "Diploma" },
-  { src: paris2, title: "Paris illustration" },
+  { src: paris2, title: "Paris illustrations" },
   { src: italy, title: "Italy" },
   { src: restaurant, title: "Restaurant" },
   { src: bookmarks, title: "Bookmarks" },
