@@ -66,11 +66,13 @@ import restaurant from "../assets/images/restaurang.jpg";
 import bookmarks from "../assets/images/bookmarks.jpg";
 import bookmark from "../assets/images/bookmarks-pettson.jpg";
 import photoshop from "../assets/images/photoshop.jpg";
+import julkula from "../assets/images/julkula.jpg";
 import glaskula from "../assets/images/glaskula.jpg";
 // import guldklot from "../assets/images/guldklot.jpg";
 // import marble from "../assets/images/marble.jpg";
 import vitvas from "../assets/images/vitvas.jpg";
 import öken from "../assets/images/öken.png";
+import månlandskap from "../assets/images/månlandskap.png";
 
 const images = [
   { src: paris, title: "Paris" },
@@ -81,12 +83,14 @@ const images = [
   { src: restaurant, title: "Restaurant" },
   { src: bookmarks, title: "Bookmarks" },
   { src: bookmark, title: "Bookmarks" },
-  { src: photoshop, title: "Photoshop illustration" },
+  { src: photoshop, title: "Book cover in Photoshop" },
+  { src: julkula, title: "Photoshop illustration" },
   { src: glaskula, title: "Photoshop illustration" },
   // { src: guldklot, title: "Photoshop illustration" },
   // { src: marble, title: "Photoshop illustration" },
   { src: vitvas, title: "Photoshop illustration" },
   { src: öken, title: "Illustrator illustration" },
+  { src: månlandskap, title: "Illustrator illustration" },
 ];
 
 const Gallery: React.FC = () => {
