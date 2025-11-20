@@ -2,7 +2,7 @@
 
 ## 📄 About The Project
 
-A simple yet responsive portfolio showcasing my artwork, built using React. This project highlights my art projects - both graphic illustrations and hadnmade drawings.
+A simple yet responsive portfolio showcasing my artwork, built using React. This project highlights my art projects - both graphic illustrations and handmade drawings.
 
 ---
 
