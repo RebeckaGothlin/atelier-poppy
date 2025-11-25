@@ -20,8 +20,8 @@ const GalleryItem = styled.div`
 
   .image-box {
     width: 100%;
-    aspect-ratio: 8 / 9;
-    background: #fae8e8;
+    aspect-ratio: 6 / 9;
+    background: #fdf6ee;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,7 +32,6 @@ const GalleryItem = styled.div`
       aspect-ratio: 11 / 9;
       padding: 1.5rem;
     }
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 
   img {
@@ -43,6 +42,7 @@ const GalleryItem = styled.div`
     object-fit: contain;
     display: block;
     transition: transform 0.3s ease, filter 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 
   .image-box:hover img {

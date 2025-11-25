@@ -24,6 +24,7 @@ const HeroSection = styled.section`
 
 const Title = styled.h2`
   font-size: 3.2rem;
+  color: #a9002d;
   font-weight: 400;
   line-height: 1.4;
   margin-top: 0;

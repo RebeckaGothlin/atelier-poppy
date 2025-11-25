@@ -19,7 +19,7 @@ const ContactSection = styled.section`
 
 const ImageBox = styled.div`
   width: 50%;
-  background: #fae8e8;
+  background: #f6f2eb;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,7 +67,8 @@ const ContactInfo = styled.div`
     margin-top: 10px;
 
     a {
-      color: #a9002d;
+      /* color: #a9002d; */
+      color: black;
       font-size: 0.8rem;
       text-decoration: underline;
       display: block;

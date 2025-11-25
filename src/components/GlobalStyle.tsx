@@ -14,8 +14,10 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: "Inter", sans-serif;
-    color: #a9002d;
-    background-color: #ffdcdc;
+    /* color: #a9002d; */
+    color: black;
+    /* background-color: #ffdcdc; */
+    background-color: #fffaf4;
     overflow-x: hidden;
   }
 `;

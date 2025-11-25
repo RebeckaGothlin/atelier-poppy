@@ -8,7 +8,8 @@ const HeaderWrapper = styled.header`
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #ffdcdc;
+  /* background-color: #ffdcdc; */
+  background-color: #fffaf4;
 
   display: flex;
   justify-content: space-between;
@@ -23,6 +24,7 @@ const Nav = styled.nav`
 `;
 
 const Logo = styled.div`
+  color: #a9002d;
   font-size: 1.7rem;
   font-weight: normal;
   text-align: center;
