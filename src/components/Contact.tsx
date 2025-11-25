@@ -19,7 +19,7 @@ const ContactSection = styled.section`
 
 const ImageBox = styled.div`
   width: 50%;
-  background: #f6f2eb;
+  background: #fdf6ee;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
     /* color: #a9002d; */
     color: black;
     /* background-color: #ffdcdc; */
-    background-color: #fffaf4;
+    background-color: #fffbf7;
     overflow-x: hidden;
   }
 `;

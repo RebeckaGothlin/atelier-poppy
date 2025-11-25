@@ -9,7 +9,7 @@ const HeaderWrapper = styled.header`
   top: 0;
   z-index: 1000;
   /* background-color: #ffdcdc; */
-  background-color: #fffaf4;
+  background-color: #fffbf7;
 
   display: flex;
   justify-content: space-between;

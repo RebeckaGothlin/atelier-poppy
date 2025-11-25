@@ -50,10 +50,21 @@ const GalleryItem = styled.div`
     filter: brightness(1.05);
   }
 
+  span {
+    text-align: left;
+    text-transform: uppercase;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 0.7rem;
+    color: #4a4a4a;
+  }
+
   p {
+    text-align: left;
     margin-top: 0.75rem;
     font-family: "Playfair Display", serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-left: 10px;
   }
 `;
 
@@ -75,22 +86,22 @@ import öken from "../assets/images/öken.png";
 import månlandskap from "../assets/images/månlandskap.png";
 
 const images = [
-  { src: paris, title: "Handmade drawing" },
-  { src: illustration, title: "Handmade drawing" },
-  { src: diploma, title: "Handmade diploma" },
-  { src: paris2, title: "Handmade Paris illustrations" },
-  { src: italy, title: "Handmade Italy illustration" },
-  { src: restaurant, title: "Handmade illustration" },
-  { src: bookmarks, title: "Handmade bookmarks" },
-  { src: bookmark, title: "Handmade bookmarks" },
-  { src: photoshop, title: "Book cover made in Photoshop" },
-  { src: julkula, title: "Photoshop illustration" },
-  { src: glaskula, title: "Photoshop illustration" },
+  { src: paris, title: "Café de Flore", type: "Handmade drawing" },
+  { src: illustration, title: "Wine and Caviar", type: "Handmade drawing" },
+  { src: diploma, title: "Diploma", type: "Handmade" },
+  { src: paris2, title: "Paris illustrations", type: "Handmade drawing" },
+  { src: italy, title: "Italy illustration", type: "Handmade drawing" },
+  { src: restaurant, title: "Parisian restaurant", type: "Handmade drawing" },
+  { src: bookmarks, title: "Bookmarks", type: "Handmade drawing" },
+  { src: bookmark, title: "Bookmarks", type: "Handmade drawing" },
+  { src: photoshop, title: "Book Cover", type: "Photoshop" },
+  { src: julkula, title: "Christmas Ornament", type: "Photoshop" },
+  { src: glaskula, title: "Glass full of Water", type: "Photoshop" },
   // { src: guldklot, title: "Photoshop illustration" },
   // { src: marble, title: "Photoshop illustration" },
-  { src: vitvas, title: "Photoshop illustration" },
-  { src: öken, title: "Illustrator illustration" },
-  { src: månlandskap, title: "Illustrator illustration" },
+  { src: vitvas, title: "White Vase", type: "Photoshop" },
+  { src: öken, title: "Desert", type: "Illustrator" },
+  { src: månlandskap, title: "Mountain nights", type: "Illustrator" },
 ];
 
 const Gallery: React.FC = () => {
@@ -102,6 +113,9 @@ const Gallery: React.FC = () => {
             <div className="image-box">
               <img src={item.src} alt={item.title} />
             </div>
+            <p>
+              <span>{item.type}</span>
+            </p>
             <p>{item.title}</p>
           </GalleryItem>
         ))}
