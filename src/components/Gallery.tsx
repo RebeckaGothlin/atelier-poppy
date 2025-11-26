@@ -10,6 +10,11 @@ const GallerySection = styled.section`
   margin-bottom: 6rem;
 
   @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 0.05rem;
+  }
+
+  @media (max-width: 575px) {
     grid-template-columns: 1fr;
     padding: 0 1rem;
   }
@@ -29,7 +34,7 @@ const GalleryItem = styled.div`
     padding: 1.9rem;
 
     @media (max-width: 768px) {
-      aspect-ratio: 11 / 9;
+      aspect-ratio: 11 / 10;
       padding: 1.5rem;
     }
   }
@@ -65,6 +70,10 @@ const GalleryItem = styled.div`
     font-size: 1.2rem;
     margin-top: 0;
     margin-left: 10px;
+
+    @media (max-width: 575px) {
+      text-align: center;
+    }
   }
 `;
 
@@ -92,11 +101,11 @@ const images = [
   { src: paris2, title: "Paris illustrations", type: "Handmade drawing" },
   { src: italy, title: "Italy illustration", type: "Handmade drawing" },
   { src: restaurant, title: "Parisian restaurant", type: "Handmade drawing" },
-  { src: bookmarks, title: "Bookmarks", type: "Handmade drawing" },
-  { src: bookmark, title: "Bookmarks", type: "Handmade drawing" },
+  { src: bookmarks, title: "Bookmarks", type: "Handmade" },
+  { src: bookmark, title: "Bookmarks", type: "Handmade" },
   { src: photoshop, title: "Book Cover", type: "Photoshop" },
   { src: julkula, title: "Christmas Ornament", type: "Photoshop" },
-  { src: glaskula, title: "Glass full of Water", type: "Photoshop" },
+  { src: glaskula, title: "Glass Marble", type: "Photoshop" },
   // { src: guldklot, title: "Photoshop illustration" },
   // { src: marble, title: "Photoshop illustration" },
   { src: vitvas, title: "White Vase", type: "Photoshop" },
