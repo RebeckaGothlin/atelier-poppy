@@ -1,5 +1,91 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+
+const ModalOverlay = styled.div`
+  position: fixed;
+  top: 37px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+`;
+
+const ModalContent = styled.div`
+  background: #fdf6ee;
+  padding: 1.5rem;
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  position: relative;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+  }
+
+  span {
+    text-align: left;
+    text-transform: uppercase;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 0.7rem;
+    color: #4a4a4a;
+  }
+
+  p {
+    text-align: left;
+    margin-top: 0.75rem;
+    font-family: "Playfair Display", serif;
+    font-size: 1.2rem;
+    margin-top: 0;
+  }
+`;
+
+const CloseButton = styled.button`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(4px);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.2s ease;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: #fffbf7;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover {
+    /* background: rgba(155, 155, 155, 0.55); */
+    transform: scale(1.12);
+  }
+`;
 
 const GallerySection = styled.section`
   display: grid;
@@ -114,12 +200,27 @@ const images = [
 ];
 
 const Gallery: React.FC = () => {
+  const [selectedImage, setSelectedImage] = useState<null | (typeof images)[0]>(
+    null
+  );
+
+  const openModal = (item: (typeof images)[0]) => {
+    setSelectedImage(item);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+  };
   return (
     <>
       <GallerySection id="prints">
         {images.map((item, index) => (
           <GalleryItem key={index}>
-            <div className="image-box">
+            <div
+              className="image-box"
+              onClick={() => openModal(item)}
+              style={{ cursor: "pointer" }}
+            >
               <img src={item.src} alt={item.title} />
             </div>
             <p>
@@ -129,6 +230,20 @@ const Gallery: React.FC = () => {
           </GalleryItem>
         ))}
       </GallerySection>
+
+      {selectedImage && (
+        <ModalOverlay onClick={closeModal}>
+          <ModalContent onClick={(e) => e.stopPropagation()}>
+            <CloseButton onClick={closeModal}>&times;</CloseButton>
+
+            <img src={selectedImage.src} alt={selectedImage.title} />
+            <p>
+              <span>{selectedImage.type}</span>
+            </p>
+            <p>{selectedImage.title}</p>
+          </ModalContent>
+        </ModalOverlay>
+      )}
     </>
   );
 };
