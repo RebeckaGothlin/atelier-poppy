@@ -163,7 +163,7 @@ const GalleryItem = styled.div`
   }
 `;
 
-import rosehill from "../assets/images/rosehillcottage.jpg";
+import rosehill from "../assets/images/rosehill.jpg";
 import paris from "../assets/images/paris (2).jpg";
 import illustration from "../assets/images/illustartion.jpg";
 import diploma from "../assets/images/diplom.jpg";
