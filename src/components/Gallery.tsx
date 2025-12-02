@@ -163,6 +163,7 @@ const GalleryItem = styled.div`
   }
 `;
 
+import rosehill from "../assets/images/rosehillcottage.jpg";
 import paris from "../assets/images/paris (2).jpg";
 import illustration from "../assets/images/illustartion.jpg";
 import diploma from "../assets/images/diplom.jpg";
@@ -181,6 +182,7 @@ import öken from "../assets/images/öken.png";
 import månlandskap from "../assets/images/månlandskap.png";
 
 const images = [
+  { src: rosehill, title: "Rosehill Cottage", type: "Handmade drawing" },
   { src: paris, title: "Café de Flore", type: "Handmade drawing" },
   { src: illustration, title: "Wine and Caviar", type: "Handmade drawing" },
   { src: diploma, title: "Diploma", type: "Handmade" },
