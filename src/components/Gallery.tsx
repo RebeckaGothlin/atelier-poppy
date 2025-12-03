@@ -167,7 +167,7 @@ import rosehill from "../assets/images/rosehill.jpg";
 import paris from "../assets/images/paris.jpg";
 import illustration from "../assets/images/caviar.jpg";
 import diploma from "../assets/images/diploma.jpg";
-import paris2 from "../assets/images/consulat.jpg";
+import paris2 from "../assets/images/leconsulat.jpg";
 import italy from "../assets/images/Italy.jpg";
 import restaurant from "../assets/images/restaurant.jpg";
 import bookmarks from "../assets/images/bookmarks (2).jpg";
