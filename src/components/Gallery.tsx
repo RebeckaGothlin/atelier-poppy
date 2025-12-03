@@ -164,12 +164,12 @@ const GalleryItem = styled.div`
 `;
 
 import rosehill from "../assets/images/rosehill.jpg";
-import paris from "../assets/images/paris (2).jpg";
-import illustration from "../assets/images/illustartion.jpg";
-import diploma from "../assets/images/diplom.jpg";
-import paris2 from "../assets/images/paris-2.jpg";
+import paris from "../assets/images/paris.jpg";
+import illustration from "../assets/images/caviar.jpg";
+import diploma from "../assets/images/diploma.jpg";
+import paris2 from "../assets/images/consulat.jpg";
 import italy from "../assets/images/Screenshot_20230121-114557_Photos.jpg";
-import restaurant from "../assets/images/restaurang.jpg";
+import restaurant from "../assets/images/restaurant.jpg";
 import bookmarks from "../assets/images/bookmarks.jpg";
 import bookmark from "../assets/images/bookmarks-pettson.jpg";
 import photoshop from "../assets/images/photoshop.jpg";
