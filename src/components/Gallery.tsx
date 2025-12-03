@@ -170,8 +170,9 @@ import diploma from "../assets/images/diploma.jpg";
 import paris2 from "../assets/images/consulat.jpg";
 import italy from "../assets/images/Italy.jpg";
 import restaurant from "../assets/images/restaurant.jpg";
-import bookmarks from "../assets/images/bookmarks.jpg";
-import bookmark from "../assets/images/bookmarks-pettson.jpg";
+import bookmarks from "../assets/images/bookmarks (2).jpg";
+import bookmark from "../assets/images/bookmark.jpg";
+import bok from "../assets/images/bok.jpg";
 import photoshop from "../assets/images/photoshop.jpg";
 import julkula from "../assets/images/julkula.jpg";
 import glaskula from "../assets/images/glaskula.jpg";
@@ -191,6 +192,7 @@ const images = [
   { src: restaurant, title: "Parisian restaurant", type: "Handmade drawing" },
   { src: bookmarks, title: "Bookmarks", type: "Handmade" },
   { src: bookmark, title: "Bookmarks", type: "Handmade" },
+  { src: bok, title: "Bookmark", type: "Handmade" },
   { src: photoshop, title: "Book Cover", type: "Photoshop" },
   { src: julkula, title: "Christmas Ornament", type: "Photoshop" },
   { src: glaskula, title: "Glass Marble", type: "Photoshop" },
