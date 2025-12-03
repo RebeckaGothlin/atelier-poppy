@@ -168,7 +168,7 @@ import paris from "../assets/images/paris.jpg";
 import illustration from "../assets/images/caviar.jpg";
 import diploma from "../assets/images/diploma.jpg";
 import paris2 from "../assets/images/consulat.jpg";
-import italy from "../assets/images/Screenshot_20230121-114557_Photos.jpg";
+import italy from "../assets/images/Italy.jpg";
 import restaurant from "../assets/images/restaurant.jpg";
 import bookmarks from "../assets/images/bookmarks.jpg";
 import bookmark from "../assets/images/bookmarks-pettson.jpg";
@@ -186,7 +186,7 @@ const images = [
   { src: paris, title: "Café de Flore", type: "Handmade drawing" },
   { src: illustration, title: "Wine and Caviar", type: "Handmade drawing" },
   { src: diploma, title: "Diploma", type: "Handmade" },
-  { src: paris2, title: "Paris illustrations", type: "Handmade drawing" },
+  { src: paris2, title: "Le Consulat", type: "Handmade drawing" },
   { src: italy, title: "Italy illustration", type: "Handmade drawing" },
   { src: restaurant, title: "Parisian restaurant", type: "Handmade drawing" },
   { src: bookmarks, title: "Bookmarks", type: "Handmade" },
