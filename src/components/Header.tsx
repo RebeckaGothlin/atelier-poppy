@@ -132,7 +132,7 @@ const Header: React.FC = () => {
             if (element) element.scrollIntoView({ behavior: "smooth" });
           }}
         >
-          Prints
+          {language === "sv" ? "Galleri" : "Gallery"}
         </Link>
       </Nav>
       <Logo
