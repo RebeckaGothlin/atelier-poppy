@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { useLanguage } from "./LanguageContext";
 
 const ModalOverlay = styled.div`
   position: fixed;
@@ -60,7 +61,9 @@ const CloseButton = styled.button`
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  transition: transform 0.15s ease, background 0.2s ease;
+  transition:
+    transform 0.15s ease,
+    background 0.2s ease;
 
   &::before,
   &::after {
@@ -132,7 +135,9 @@ const GalleryItem = styled.div`
     height: auto;
     object-fit: contain;
     display: block;
-    transition: transform 0.3s ease, filter 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      filter 0.3s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 
@@ -183,29 +188,126 @@ import öken from "../assets/images/öken.png";
 import månlandskap from "../assets/images/månlandskap.png";
 
 const images = [
-  { src: rosehill, title: "Rosehill Cottage", type: "Handmade drawing" },
-  { src: paris, title: "Café de Flore", type: "Handmade drawing" },
-  { src: illustration, title: "Wine and Caviar", type: "Handmade drawing" },
-  { src: diploma, title: "Diploma", type: "Handmade" },
-  { src: paris2, title: "Le Consulat", type: "Handmade drawing" },
-  { src: italy, title: "Italy illustration", type: "Handmade drawing" },
-  { src: restaurant, title: "Parisian restaurant", type: "Handmade drawing" },
-  { src: bookmarks, title: "Bookmarks", type: "Handmade" },
-  { src: bookmark, title: "Bookmarks", type: "Handmade" },
-  { src: bok, title: "Bookmark", type: "Handmade" },
-  { src: photoshop, title: "Book Cover", type: "Photoshop" },
-  { src: julkula, title: "Christmas Ornament", type: "Photoshop" },
-  { src: glaskula, title: "Glass Marble", type: "Photoshop" },
+  {
+    src: rosehill,
+    titleSV: "Rosehill Cottage",
+    titleEN: "Rosehill Cottage",
+    typeSV: "Handgjord tekcning",
+    typeEN: "Handmade drawing",
+  },
+  {
+    src: paris,
+    titleSV: "Café de Flore",
+    titleEN: "Café de Flore",
+    typeSV: "Handgjord teckning",
+    typeEN: "Handmade drawing",
+  },
+  {
+    src: illustration,
+    titleSV: "Wine and Caviar",
+    titleEN: "Wine and Caviar",
+    typeSV: "Handgjord teckning",
+    typeEN: "Handmade drawing",
+  },
+  {
+    src: diploma,
+    titleSV: "Diplom",
+    titleEN: "Diploma",
+    typeSV: "Handgjord",
+    typeEN: "Handmade",
+  },
+  {
+    src: paris2,
+    titleSV: "Le Consulat",
+    titleEN: "Le Consulat",
+    typeSV: "Handgjord teckning",
+    typeEN: "Handmade drawing",
+  },
+  {
+    src: italy,
+    titleSV: "Italy illustration",
+    titleEN: "Italy illustration",
+    typeSV: "Handgjord teckning",
+    typeEN: "Handmade drawing",
+  },
+  {
+    src: restaurant,
+    titleSV: "Parisian restaurant",
+    titleEN: "Parisian restaurant",
+    typeSV: "Handgjord teckning",
+    typeEN: "Handmade drawing",
+  },
+  {
+    src: bookmarks,
+    titleSV: "Bokmärken",
+    titleEN: "Bookmarks",
+    typeSV: "Handgjord",
+    typeEN: "Handmade",
+  },
+  {
+    src: bookmark,
+    titleSV: "Bokmärken",
+    titleEN: "Bookmarks",
+    typeSV: "Handgjord",
+    typeEN: "Handmade",
+  },
+  {
+    src: bok,
+    titleSV: "Bokmärke",
+    titleEN: "Bookmark",
+    typeSV: "Handgjord",
+    typeEN: "Handmade",
+  },
+  {
+    src: photoshop,
+    titleSV: "Bokomslag",
+    titleEN: "Book cover",
+    typeSV: "Photoshop",
+    typeEN: "Photoshop",
+  },
+  {
+    src: julkula,
+    titleSV: "Julkula",
+    titleEN: "Christmas ornament",
+    typeSV: "Photoshop",
+    typeEN: "Photoshop",
+  },
+  {
+    src: glaskula,
+    titleSV: "Glaskula",
+    titleEN: "Glass marble",
+    typeSV: "Photoshop",
+    typeEN: "Photoshop",
+  },
   // { src: guldklot, title: "Photoshop illustration" },
   // { src: marble, title: "Photoshop illustration" },
-  { src: vitvas, title: "White Vase", type: "Photoshop" },
-  { src: öken, title: "Desert", type: "Illustrator" },
-  { src: månlandskap, title: "Mountain nights", type: "Illustrator" },
+  {
+    src: vitvas,
+    titleSV: "Vit vas",
+    titleEN: "White vase",
+    typeSV: "Photoshop",
+    typeEN: "Photoshop",
+  },
+  {
+    src: öken,
+    titleSV: "Öken",
+    titleEN: "Desert",
+    typeSV: "Illustrator",
+    typeEN: "Illustrator",
+  },
+  {
+    src: månlandskap,
+    titleSV: "Mountain nights",
+    titleEN: "Mountain nights",
+    typeSV: "Illustrator",
+    typeEN: "Illustrator",
+  },
 ];
 
 const Gallery: React.FC = () => {
+  const { language } = useLanguage();
   const [selectedImage, setSelectedImage] = useState<null | (typeof images)[0]>(
-    null
+    null,
   );
 
   const openModal = (item: (typeof images)[0]) => {
@@ -225,12 +327,15 @@ const Gallery: React.FC = () => {
               onClick={() => openModal(item)}
               style={{ cursor: "pointer" }}
             >
-              <img src={item.src} alt={item.title} />
+              <img
+                src={item.src}
+                alt={language === "sv" ? item.titleSV : item.titleEN}
+              />
             </div>
             <p>
-              <span>{item.type}</span>
+              <span>{language === "sv" ? item.typeSV : item.typeEN}</span>
             </p>
-            <p>{item.title}</p>
+            <p>{language === "sv" ? item.titleSV : item.titleEN}</p>
           </GalleryItem>
         ))}
       </GallerySection>
@@ -240,11 +345,26 @@ const Gallery: React.FC = () => {
           <ModalContent onClick={(e) => e.stopPropagation()}>
             <CloseButton onClick={closeModal}>&times;</CloseButton>
 
-            <img src={selectedImage.src} alt={selectedImage.title} />
+            <img
+              src={selectedImage.src}
+              alt={
+                language === "sv"
+                  ? selectedImage.titleSV
+                  : selectedImage.titleEN
+              }
+            />
             <p>
-              <span>{selectedImage.type}</span>
+              <span>
+                {language === "sv"
+                  ? selectedImage.typeSV
+                  : selectedImage.typeEN}
+              </span>
             </p>
-            <p>{selectedImage.title}</p>
+            <p>
+              {language === "sv"
+                ? selectedImage.titleSV
+                : selectedImage.titleEN}
+            </p>
           </ModalContent>
         </ModalOverlay>
       )}
