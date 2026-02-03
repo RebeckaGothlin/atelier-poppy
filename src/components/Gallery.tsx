@@ -192,7 +192,7 @@ const images = [
     src: rosehill,
     titleSV: "Rosehill Cottage",
     titleEN: "Rosehill Cottage",
-    typeSV: "Handgjord tekcning",
+    typeSV: "Handgjord teckning",
     typeEN: "Handmade drawing",
   },
   {
